@@ -1,0 +1,11 @@
+979b0c425d2ec6243d31590f9ff8c259 *DESCRIPTION
+8188c8bab362be21064b2be115d00976 *NAMESPACE
+ae4857a50db27cd0c5dbe54df9691506 *R/robspca.R
+524f4de8c391b09743d3473bf07d82e2 *R/rspca.R
+2573f89d322f03c17259c7aaf6df85cb *R/spca.R
+069a2475f37e45552f665f601e65416f *man/robspca.Rd
+02858ac4f30520fc9b91b024ab71c77e *man/rspca.Rd
+9d99f71f011840c9d3aef8f85037e969 *man/spca.Rd
+06ea7f639812baa18680b2bfcd829579 *tests/testthat/test_robspca.R
+54f1a3f845035a5f2077f58351c802ed *tests/testthat/test_rspca.R
+2bd6f683cd5742051373e0c55c4aea0e *tests/testthat/test_spca.R
