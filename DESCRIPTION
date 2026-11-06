@@ -1,18 +1,44 @@
 Package: sparsepca
 Type: Package
-Title: Sparse Principal Component Analysis (SPCA)
-Version: 0.1.2
-Author: N. Benjamin Erichson, Peng Zheng, and Sasha Aravkin
-Maintainer: N. Benjamin Erichson <erichson@uw.edu>
-Description: Sparse principal component analysis (SPCA) attempts to find sparse weight vectors (loadings), i.e., a weight vector with only a few 'active' (nonzero) values. This approach provides better interpretability for the principal components in high-dimensional data settings. This is, because the principal components are formed as a linear combination of only a few of the original variables. This package provides efficient routines to compute SPCA. Specifically, a variable projection solver is used to compute the sparse solution. In addition, a fast randomized accelerated SPCA routine and a robust SPCA routine is provided. Robust SPCA allows to capture grossly corrupted entries in the data. The methods are discussed in detail by N. Benjamin Erichson et al. (2018) <arXiv:1804.00341>. 
+Title: Sparse Principal Component Analysis
+Version: 1.0.0
+Authors@R: c(
+    person("N. Benjamin", "Erichson", role = c("aut", "cre"),
+           email = "erichson@icsi.berkeley.edu"),
+    person("Peng", "Zheng", role = "aut"),
+    person("Sasha", "Aravkin", role = "aut"),
+    person("Maria A.", "Sans-Fuentes", role = "ctb",
+           comment = c(ORCID = "0000-0002-6402-9211",
+                       "Reported the robust objective error")))
+Description: Fits principal components with sparse loading vectors for
+    interpretable dimension reduction. Variable projection combines an
+    orthogonal reconstruction factor with elastic net or cardinality
+    regularization of the loadings. Deterministic, randomized, and robust
+    algorithms support exploratory analysis of high-dimensional data;
+    the randomized algorithm also supports sparse input matrices through
+    implicit centering and scaling. A robust formulation separates
+    entrywise outliers from the low-rank reconstruction. Regularization
+    paths and approximate feature-count searches reuse matrix factorizations,
+    and prediction applies the fitted transformation to new observations.
+    The methods are described in
+    Erichson et al. (2020) <doi:10.1137/18M1211350>.
 License: GPL (>= 3)
+Depends: R (>= 4.4.0)
+Imports: Matrix (>= 1.7-0), methods, rsvd (>= 2.0.0)
+Suggests: testthat (>= 3.3.2)
 Encoding: UTF-8
-LazyData: true
 URL: https://github.com/erichson/spca
 BugReports: https://github.com/erichson/spca/issues
-Imports: rsvd
-RoxygenNote: 6.0.1
 NeedsCompilation: no
-Packaged: 2018-04-09 22:02:31 UTC; benli
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.1
+Packaged: 2026-11-03 22:55:30 UTC; runner
+Author: N. Benjamin Erichson [aut, cre],
+  Peng Zheng [aut],
+  Sasha Aravkin [aut],
+  Maria A. Sans-Fuentes [ctb] (ORCID:
+    <https://orcid.org/0000-0002-6402-9211>, Reported the robust
+    objective error)
+Maintainer: N. Benjamin Erichson <erichson@icsi.berkeley.edu>
 Repository: CRAN
-Date/Publication: 2018-04-11 08:17:42 UTC
+Date/Publication: 2026-11-06 13:30:02 UTC
